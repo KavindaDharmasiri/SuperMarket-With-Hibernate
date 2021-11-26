@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemManage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="524.0" stylesheets="@../view/css/TableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemManageFormController">
+   <children>
+      <Button layoutX="416.0" layoutY="56.0" mnemonicParsing="false" onAction="#addNewItem" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #50c878; -fx-background-radius: 45;" text="Add New Item">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="itemTbl" layoutX="10.0" layoutY="95.0" prefHeight="153.0" prefWidth="503.0">
+         <columns>
+            <TableColumn fx:id="colCode" prefWidth="53.0" text="Code" />
+            <TableColumn fx:id="colDescription" prefWidth="107.0" text="Description" />
+            <TableColumn fx:id="colPackSize" prefWidth="76.0" text="Pack Size" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="97.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="83.0" text="Qty On Hand" />
+            <TableColumn fx:id="colEdit" prefWidth="83.0" text="Edit" />
+         </columns>
+      </TableView>
+      <Label layoutX="4.0" layoutY="16.0" prefHeight="31.0" prefWidth="515.0" text="                                     Manage Item">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

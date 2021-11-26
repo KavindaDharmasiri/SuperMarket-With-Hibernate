@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FinalReportMoney" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2ee301cd-08a6-4456-8ba3-8a87254d62ba">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MysqlConnector"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM systemreport]]>
+	</queryString>
+	<field name="todayIncome" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="todayIncome"/>
+		<property name="com.jaspersoft.studio.field.label" value="todayIncome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="systemreport"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monthlyIncome" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="monthlyIncome"/>
+		<property name="com.jaspersoft.studio.field.label" value="monthlyIncome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="systemreport"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="yearlyIncome" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="yearlyIncome"/>
+		<property name="com.jaspersoft.studio.field.label" value="yearlyIncome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="systemreport"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mostMovableItem" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mostMovableItem"/>
+		<property name="com.jaspersoft.studio.field.label" value="mostMovableItem"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="systemreport"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leastMovableItem" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="leastMovableItem"/>
+		<property name="com.jaspersoft.studio.field.label" value="leastMovableItem"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="systemreport"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="-3" width="555" height="58" forecolor="rgba(255, 255, 255, 0.91764706)" backcolor="#547FC4" uuid="e4caa4f5-17a7-4ca9-8ab8-10f2895239f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Super Market]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="555" height="30" forecolor="rgba(105, 85, 85, 0.67058825)" uuid="6e91e066-2a55-4ddc-a12d-e16d76c87e0a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Final Payment Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="193" y="80" width="100" height="30" forecolor="rgba(105, 85, 85, 0.67058825)" uuid="45d4002a-d212-4dfe-923b-a32fe654ac45"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="301" y="80" width="100" height="30" forecolor="rgba(105, 85, 85, 0.67058825)" uuid="ed8767ff-6788-497e-b016-94cdcaa0c079">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="416" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="78" width="137" height="30" uuid="4de1b7c6-880f-4092-b364-0f718bdb8f5f"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Today Income    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="120" width="137" height="30" uuid="530d8610-3c29-4b48-a62e-3a7ee8651e81"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Income :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="160" width="137" height="30" uuid="66deeea0-1713-41ab-988e-f00047c79b89"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yearly Income    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="350" width="555" height="66" forecolor="#3A13E8" uuid="94d9bccb-ceb1-48e0-a221-98ef602685f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Super Market...
+GOOD DAY SIR..!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="9" width="210" height="241" forecolor="rgba(255, 255, 255, 0.91764706)" backcolor="#5C6778" uuid="0d011aef-4f28-438c-8af8-a580485cea5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Good Service         Ever..
+
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="80" width="111" height="30" forecolor="#BF3836" uuid="7239695c-7fb9-4f51-9bcb-e2c2f9854f31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{todayIncome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="120" width="111" height="30" forecolor="#BF3836" uuid="b0283420-b0c7-41b8-bebd-dff754f51760"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monthlyIncome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="160" width="111" height="30" forecolor="#BF3836" uuid="d604fb0f-9544-4bb7-8b39-e4c84105af45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearlyIncome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="240" width="131" height="30" uuid="9274b29d-aea8-4f77-a16a-ba89ec75843d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mostMovableItem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="290" width="131" height="30" uuid="6708cbb3-3cd9-460f-b458-e3d8403fb6c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leastMovableItem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="240" width="170" height="30" uuid="489c6bfc-a209-4efb-a1a1-ffa7cf140ddc"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Most Movable Item   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="290" width="170" height="30" uuid="e42c7e9e-4197-4117-a997-bf159fb3c91b"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Least Movable Item  :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+</jasperReport>

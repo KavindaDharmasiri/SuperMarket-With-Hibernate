@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="makePayment" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="524.0" stylesheets="@../view/css/TableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakePaymentController">
+   <children>
+      <TableView fx:id="paymentTbl" layoutX="3.0" layoutY="92.0" prefHeight="157.0" prefWidth="516.0">
+        <columns>
+          <TableColumn fx:id="orderId" prefWidth="157.0" text="Order Id" />
+          <TableColumn fx:id="orderDate" prefWidth="175.0" text="Date" />
+            <TableColumn fx:id="customerId" prefWidth="186.0" text="Customer Id" />
+        </columns>
+      </TableView>
+      <Label layoutX="5.0" layoutY="2.0" prefHeight="31.0" prefWidth="516.0" text="                                     Payment Info">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="397.0" layoutY="55.0" mnemonicParsing="false" onAction="#makePayment" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #7fffd4;" text="Make Payment" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

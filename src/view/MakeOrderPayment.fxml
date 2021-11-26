@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeMoney" prefHeight="334.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeOrderPaymentController">
+    <children>
+        <JFXComboBox fx:id="cmbOrder" layoutX="39.0" layoutY="45.0" prefHeight="25.0" prefWidth="151.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></JFXComboBox>
+        <Label layoutX="39.0" layoutY="132.0" prefHeight="25.0" prefWidth="52.0" text="Price : ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblPrice" layoutX="91.0" layoutY="132.0" prefHeight="25.0" prefWidth="83.0" text="price" textFill="#eb0b0b" />
+        <JFXButton fx:id="makeBtn" buttonType="RAISED" layoutX="349.0" layoutY="270.0" onAction="#makePayment" prefHeight="41.0" prefWidth="151.0" style="-fx-background-color: #2ade70;" text="Make Payment Success" textFill="#f8f6f6">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="233.0" layoutY="270.0" onAction="#ExitBtn" prefHeight="41.0" prefWidth="108.0" style="-fx-background-color: red;" text="Exit" textFill="#f8f6f6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

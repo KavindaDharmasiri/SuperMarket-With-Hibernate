@@ -1,0 +1,10 @@
+.menuItem:hover{
+    -fx-border-color: #D2042D;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.sidebarItem:hover{
+    -fx-background-color: #D2042D;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}

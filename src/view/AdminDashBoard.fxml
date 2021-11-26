@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="adminDashBoard" prefHeight="401.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../view/css/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardController">
+   <children>
+      <Pane layoutX="603.0" layoutY="398.0" prefHeight="19.0" prefWidth="97.0" style="-fx-background-color: #800020;" />
+      <Pane layoutY="398.0" prefHeight="38.0" prefWidth="700.0" style="-fx-background-color: #800020; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="8.0" layoutY="11.0" prefHeight="17.0" prefWidth="685.0" text="                                                                          Super Market. PVT LTD" textAlignment="CENTER" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <AnchorPane fx:id="adminAnchrPan" layoutX="176.0" layoutY="68.0" prefHeight="334.0" prefWidth="524.0">
+         <children>
+            <Label layoutX="129.0" layoutY="277.0" text="Welcome Admin : " textAlignment="CENTER" textFill="#6d2272">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtAdminName" layoutX="273.0" layoutY="274.0" prefHeight="25.0" prefWidth="237.0" text="admin Name" textAlignment="CENTER" textFill="#6d2272">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="14.0" text="ADMIN DASHBOARD">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="150.0" layoutY="21.0" prefHeight="3.0" prefWidth="348.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="slider" layoutX="46.0" layoutY="68.0" opacity="0.8" prefHeight="334.0" prefWidth="133.0" style="-fx-background-color: #FF3131;">
+         <children>
+            <VBox prefHeight="334.0" prefWidth="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane prefHeight="66.0" prefWidth="133.0">
+                     <children>
+                        <Circle fx:id="circle" fill="DODGERBLUE" layoutX="34.0" layoutY="32.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Circle fill="#1f93ff00" layoutX="34.0" layoutY="32.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="txtName" prefHeight="19.0" prefWidth="97.0" text="name" textAlignment="CENTER" textFill="#d08f8f">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefHeight="7.0" prefWidth="110.0" style="-fx-background-color: blue;" />
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#dashBoard" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="     DashBoard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#SystemReport" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="     System Report" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#item" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="     Items" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin></Separator>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#logOut" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="     Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="slid1" layoutY="68.0" prefHeight="349.0" prefWidth="46.0" style="-fx-background-color: #800020;">
+         <children>
+            <VBox layoutY="56.0" prefHeight="270.0" prefWidth="46.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#dashBoard" prefHeight="36.0" prefWidth="22.0" styleClass="sidebarItem" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/home-3-256 (1).png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="45.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#SystemReport" prefHeight="30.0" prefWidth="15.0" styleClass="sidebarItem" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/calendar-2562.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#item" prefHeight="41.0" prefWidth="27.0" styleClass="sidebarItem" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/icons8-activity-history-30.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Separator prefHeight="3.0" prefWidth="27.0">
+                     <VBox.margin>
+                        <Insets top="45.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#logOut" prefHeight="36.0" prefWidth="45.0" styleClass="sidebarItem" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/icons8-export-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="8.0" top="2.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="31.0" fitWidth="22.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/item Update.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="13.0" prefHeight="25.0" prefWidth="700.0" style="-fx-background-color: #811331;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0" />
+      <AnchorPane layoutY="31.0" minHeight="-Infinity" prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: WHITE; -fx-border-color: black;">
+         <children>
+            <HBox layoutX="239.0" prefHeight="60.0" prefWidth="409.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <JFXButton onAction="#dashBoard" prefHeight="35.0" prefWidth="233.0" styleClass="menuItem" text="     DashBoard">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/home-3-256.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#SystemReport" prefHeight="35.0" prefWidth="265.0" styleClass="menuItem" text="     System Report">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo/calendar-256.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="MenuClose" layoutX="56.0" layoutY="3.0" prefHeight="25.0" prefWidth="66.0" text="MENU" textFill="#b7b7b7" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="580.0" AnchorPane.topAnchor="3.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/menu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/menu1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Menu" layoutX="57.0" layoutY="4.0" prefHeight="21.0" prefWidth="44.0" text="MENU" textFill="#b7b7b7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="31.0" prefWidth="700.0" style="-fx-background-color: #811331; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <ImageView fx:id="Exit" fitHeight="22.0" fitWidth="22.0" layoutX="672.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="637.0" layoutY="6.0" onMouseClicked="#min" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/minimize (1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="9.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/item Update.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#f5f2f2" layoutX="36.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super Market" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
