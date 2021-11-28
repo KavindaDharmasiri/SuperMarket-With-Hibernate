@@ -1,6 +1,10 @@
 package bo.custom.impl;
 
+import bo.BoFactory;
 import bo.custom.CreateAccountBo;
+import bo.custom.ItemBo;
+import dao.DAOFactory;
+import dao.custom.NewUserDAO;
 import dto.NewUserDTO;
 import entity.NewUser;
 import org.hibernate.Session;
@@ -14,36 +18,15 @@ import java.util.List;
 
 public class CreateAccountBoImpl implements CreateAccountBo {
 
+    private final NewUserDAO newUserDAO = (NewUserDAO) DAOFactory.getDAOFactory().getDAO(DAOFactory.DAOTypes.NEW_USER);
     @Override
     public boolean saveNewUser(NewUserDTO user) throws SQLException, ClassNotFoundException {
-
         NewUser newUser = new NewUser(user.getName(), user.getPassword(), user.getType());
-
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-        Serializable save = session.save(newUser);
-
-        transaction.commit();
-        session.close();
-        return !save.equals(null);
+        return newUserDAO.add(newUser);
     }
 
     @Override
     public List<NewUser> searchUser(String name) throws SQLException, ClassNotFoundException {
-
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-        String hql = "FROM NewUser WHERE type = :owner_name";
-        Query query = session.createQuery(hql);
-        query.setParameter("owner_name", name);
-        List<NewUser> result = query.list();
-
-        transaction.commit();
-        session.close();
-
-        return result;
-
+        return newUserDAO.searchUser(name);
     }
 }
